@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- <h1 class="bg-teal-400 text-red-600"> Hello world! </h1> -->
+    <h1 class="m-7 text-3xl"> Colors with Shades </h1>
+    <h1 class="text-fuchsia-950 m-7 text-3xl"> 1. This is color </h1>
+    <h1 class="text-lime-50 m-7 text-3xl"> 2. This is color </h1>
+    <h1 class="text-lime-100 m-7 text-3xl"> 2. This is color </h1>
+    <h1 class="text-lime-200 m-7 text-3xl"> 2. This is color </h1>
+    <h1 class="text-lime-300 m-7 text-3xl"> 2. This is color </h1>
+    <h1 class="text-lime-400 m-7 text-3xl"> 2. This is color </h1>
+    <h1 class="text-lime-500/100 m-7 text-3xl"> 2. This is color </h1>
+    <h1 class="text-[#dd00ff] m-7 text-3xl"> 2. This is color </h1>
+
+    <br>
+    <br>
+    <hr>
+    <h1 class="text-2xl m-7"> Background color</h1>
+
+    <div class="bg-purple-400">
+        <p class="text-yellow-700 m-7"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem explicabo quo qui
+            cum quos maxime deserunt vero, perferendis necessitatibus minima?</p>
+        <button class="bg-indigo-500 hover:bg-fuchsia-500 m-7 rounded-2xl w-35 h-20 hover:cursor-wait">Save
+            changes</button>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <h1 class="text-2xl m-7"> Text decoration </h1>
+    <div>
+        <a href="" class="text-3xl m-7 line-through">click here</a>
+        <br>
+        <a href=""
+            class="text-3xl m-7 text-amber-400 underline decoration-red-900 decoration-dashed decoration-30 underline-offset-6">click to
+            visit</a>
+    </div>
+
+    <br>
+    <br>
+    <hr>
+    <h1 class="text-2xl m-7"> Accent color - change the color of checkbox , radio , range etc </h1>
+    <label class="m-7">
+        <input class="accent-yellow-500 w-6 h-6 mr-3" type="checkbox" checked />
+        <span class="text-4xl">Customized</span>
+    </label>
+    <label>
+        <span> 0</span>
+        <input type="range" min="1" max="100" class="accent-cyan-300" id="r">
+        <span>100</span>
+
+    </label>
+
+    <br>
+    <br>
+    <hr>
+    stop
+
+    <script>
+        let inrange = document.querySelector("#r")
+        const max = inrange.getAttribute("max")
+        inrange.addEventListener("change", (e) => {
+            console.log("change happen")
+            let here = e.target.value
+            if (max === here) {
+                alert("Max Limit")
+            }
+
+        })
+    </script>
+</body>
+
+</html>
