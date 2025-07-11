@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tailwind Card Practice</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-10 dark:bg-black">
+
+    <div
+        class="container max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden dark:bg-black border border-solid border-red-800 dark:border-white sm:flex ">
+        <img class="w-full h-48 object-cover sm:w-1/2 sm:h-77 sm:object-fill " 
+            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D"
+            alt="Card Image">
+        <div class="p-6">
+            <h2 class="text-xl font-bold mb-2 text-gray-800 dark:text-white">Headphone</h2>
+            <p class="text-gray-600 mb-4 text-justify dark:text-gray-400">
+                This is a simple card component using Tailwind CSS. You can add responsiveness to make it
+                mobile-friendly.
+            </p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 hover:cursor-pointer ">
+                Buy now
+            </button>
+        </div>
+    </div>
+    <div>
+        <button class="theme bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 hover:cursor-pointer ">
+            dark/light
+        </button>
+    </div>
+
+
+</body>
+
+<script>
+    let btn_theme = document.querySelector(".theme")
+    let containers = document.querySelectorAll(".container,body")
+
+    btn_theme.addEventListener('click', () => {
+        containers.forEach(container => {
+            container.classList.toggle("dark")
+        });
+    })
+
+</script>
+
+</html>
